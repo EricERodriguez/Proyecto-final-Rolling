@@ -1,0 +1,5 @@
+# No eliminar, esto busca y borra todas las carpetas modules y aquellas que se creen para subir, no descomentar .env que es quien guarda los cambios de desarrollo
+
+*/node_modules
+# */.env
+*/build
