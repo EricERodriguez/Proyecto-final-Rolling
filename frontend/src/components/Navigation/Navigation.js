@@ -8,7 +8,7 @@ class Navigation extends Component {
     const { isAuth } = this.props;
 
     return (
-      <nav className="navbar navbar-expand-lg navbar-light ">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
 
           <Link className="nav-brand text-decoration-none text-reset h4 my-auto" to="/">RollingSocialGame</Link>

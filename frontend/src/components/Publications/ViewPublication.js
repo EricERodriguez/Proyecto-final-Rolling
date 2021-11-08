@@ -15,8 +15,8 @@ class ViewPublication extends Component {
     const { title, content, author, date } = this.props;
 
     return (
-      <div className="card mb-4">
-        <div className="card-header bg-white d-flex justify-content-between">
+      <div className="card  border-success mb-4">
+        <div className="card-header bg-black d-flex justify-content-between">
           <h3 className="card-title">{title}</h3>
           {/* {author === this.props.user ? (
             <section>

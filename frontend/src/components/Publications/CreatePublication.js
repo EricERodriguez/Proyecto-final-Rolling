@@ -31,7 +31,7 @@ class CreatePublication extends Component {
 
   render() {
     return (
-      <div className="card card-body mb-4">
+      <div className="card card-body mb-4 border-info">
         <form onSubmit={this.createPublication}>
           <div className="form-group">
             <input type="text" className="form-control" placeholder="Titulo" value={this.state.title} onChange={this.onChangeInput} name="title"/>

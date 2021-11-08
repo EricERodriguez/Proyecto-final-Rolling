@@ -75,6 +75,8 @@ npm start
 
 * FontAwesome
 
+* bootswatch
+
   
 
 ### BackEnd

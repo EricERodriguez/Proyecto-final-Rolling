@@ -54,19 +54,19 @@ class Register extends Component{
 
   render(){
     return (
-      <div className="card card-body">
+      <div className="card card-body border-dark">
         <h3 className="card-title">Registro</h3>
         <form onSubmit={this.createAccount}>
-          <div className="form-group">
+          <div className="form-group p-3">
             <input type="text" className="form-control" name="username" placeholder="Nombre de Usuario" onChange={this.onInputChange} value={this.state.username}/>
           </div>
-          <div className="form-group">
+          <div className="form-group p-3">
             <input type="text" className="form-control" name="fullName" placeholder="Nombre Completo" onChange={this.onInputChange} value={this.state.fullName}/>
           </div>
-          <div className="form-group">
+          <div className="form-group p-3">
             <input type="email" className="form-control" name="email" placeholder="Email" onChange={this.onInputChange} value={this.state.email}/>
           </div>
-          <div className="form-group">
+          <div className="form-group p-3">
             <input type="password" className="form-control" name="password" placeholder="Contraseña" onChange={this.onInputChange} value={this.state.password} />
           </div>
           <div className="form-group row pl-3 pr-3">

@@ -34,7 +34,7 @@ class Login extends Component{
 
   render(){
     return (
-      <div className="card card-body">
+      <div className="card card-body border-success">
         <h3 className="card-title">Iniciar Sesion</h3>
         <form onSubmit={this.login}>
           <div className="form-group">
