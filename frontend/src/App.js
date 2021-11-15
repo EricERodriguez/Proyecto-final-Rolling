@@ -13,8 +13,11 @@ import Login from "./components/LoginSystem/Login";
 import Register from "./components/LoginSystem/Register";
 import Error404 from "./components/Errors/Error404";
 import Profile from "./components/User/Profile";
+import Admin from './components/Admin/Admin';
 
-
+function reload() {
+  window.location.reload();
+}
 
 class App extends Component{
 
@@ -25,25 +28,27 @@ class App extends Component{
   auth = (account) => {
     this.setState({account, isAuth: true})
     localStorage.setItem("acc", this.state.account._id);
+    reload()
   }
 
   desAuth = () => {
     this.setState({account: {}, isAuth: false});
     localStorage.removeItem("acc");
+    reload()
   }
 
   componentWillMount = async () => {
     const acc = localStorage.getItem("acc");
     if(acc){
       const res = await axios.get("http://localhost:4000/api/users/"+acc);
-      this.setState({account: res.data, isAuth: true});
+      this.setState({account: res.data, isAuth: true, roles: res.data.role});
     }
   }
 
   render(){
     return (
       <Router>
-        <Navigation isAuth={this.state.isAuth} desAuth={this.desAuth} />
+        <Navigation isAuth={this.state.isAuth} desAuth={this.desAuth}  acc={this.state.account} rol={this.state.roles} />
 
         {
           this.state.isAuth ? (
@@ -52,6 +57,9 @@ class App extends Component{
                 <Route path="/" exact render={(props) => <Home {...props} isAuth={this.state.isAuth} auth={this.auth} acc={this.state.account} />}/>
                 <Route path="/publication/:id" render={(props) => <Publication {...props} acc={this.state.account} />} />
                 <Route path="/profile" render={(props) => <Profile {...props} acc={this.state.account} />} />
+                {this.state.roles === "ADMIN"?
+                <Route path="/admin" render={(props) => <Admin {...props} acc={this.state.account} rol={this.state.roles}/>} /> :
+                <Route path="/" exact render={(props) => <Home {...props} isAuth={this.state.isAuth} auth={this.auth} acc={this.state.account} />}/>}
                 <Route component={Error404} />
               </Switch>
 
