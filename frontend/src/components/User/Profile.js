@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGithub, faLinkedin, faTwitter  } from '@fortawesome/free-brands-svg-icons'
 import"./Profile.css";
+import { Link } from 'react-router-dom';
 
 class Profile extends Component{
   render(){
@@ -11,7 +12,7 @@ class Profile extends Component{
 
     function isAdmin() {
       if (role === "ADMIN") {
-        return <h5 class="role">role: {role}</h5>
+        return <Link className="dropdown-item" to="/admin/">rol: {role}</Link>
       } else {
         return ""
       }
