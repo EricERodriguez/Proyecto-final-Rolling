@@ -30,9 +30,9 @@ export function CenteredText() {
       alignItems="center"
       spacing={3}
     >
-      <Grid item xs>
-        <Typography variant="body1" align="center" gutterBottom="true">
-        Lo que quieras juagar a tu alcance y al menor costo o incluso sin ninguno.
+      <Grid item xs >
+        <Typography variant="body1" align="center" gutterBottom="true" >
+        Lo que quieras jugar a tu alcance y al menor costo, o incluso sin ninguno.
         </Typography>
       </Grid>
       <Grid item xs>

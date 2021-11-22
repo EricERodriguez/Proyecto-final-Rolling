@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import { CenteredText } from '../Home/componentesT/CenteredText';
 
 class Login extends Component{
 
@@ -34,6 +35,7 @@ class Login extends Component{
 
   render(){
     return (
+      
       <div className="card card-body border-success">
         <h3 className="card-title">Iniciar Sesion</h3>
         <form onSubmit={this.login}>
@@ -45,6 +47,7 @@ class Login extends Component{
           </div>
           <button className="btn btn-primary">Iniciar</button>
         </form>
+        <CenteredText/>
         {
           this.state.error.length > 0 ? (
             <div className="alert alert-danger mt-3">
