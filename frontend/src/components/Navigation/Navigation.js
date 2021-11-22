@@ -6,6 +6,8 @@ class Navigation extends Component {
   render() {
 
     const { isAuth } = this.props;
+    const rol = this.props.rol;
+    console.log(rol)
 
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,6 +33,7 @@ class Navigation extends Component {
                       </a>
                       <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                         <Link className="dropdown-item" to="/profile/">Perfil</Link>
+                        { rol === "ADMIN"? <Link className="dropdown-item" to="/admin/">rol {rol}</Link>: <hr/>}
                         <div className="dropdown-divider"></div>
                         <a className="dropdown-item" href="#" onClick={this.props.desAuth}>Cerrar Sesion</a>
                       </div>
