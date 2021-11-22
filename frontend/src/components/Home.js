@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import HomeNotLogin from './Home/HomeNotLogin';
 
 // import Dashboard from "./Dashboard";
 import Cards from './HomeLogin/Cards';
@@ -28,7 +29,8 @@ class Home extends Component {
               </div>
               <div className="col-md">
                 <Register />
-              </div>
+              </div>,
+              <HomeNotLogin/>
             </div>
           </div>
         }
