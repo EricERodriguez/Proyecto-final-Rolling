@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import HomeNotLogin from './Home/HomeNotLogin';
 
 // import Dashboard from "./Dashboard";
 import Cards from './HomeLogin/Cards';
@@ -23,12 +24,13 @@ class Home extends Component {
           ) :
           <div>
             <div className="row">
-              <div className="col-md">
+              {/* <div className="col-md">
                 <Login auth={this.props.auth} />
               </div>
               <div className="col-md">
                 <Register />
-              </div>
+              </div>, */}
+              <HomeNotLogin/>
             </div>
           </div>
         }

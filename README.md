@@ -43,8 +43,8 @@ npm start
     │   	│   	│   	└── Errors
     │   	│   	│   	└── Footer
     │   	│   	│   	└── HomeLogin
-    │   	│   	│   	       └── Assets
-    │   	│   	│   	              └── Img
+    │   	│   	│                └── Assets
+    │   	│   	│                  └── Img
     │   	│   	│   	└── LoginSystem
     │   	│   	│   	└── Navigation
     │   	│   	│   	└── Publications
@@ -69,6 +69,10 @@ npm start
 * Bootstrap 4
 
 * React-Bootstrap
+
+* @material-ui/core
+
+* @material-ui/core
 
 * React
 
