@@ -18,6 +18,7 @@ class CreatePublication extends Component {
 
     this.setState({
       title: "",
+      img: "",
       content: "",
     })
 
@@ -35,6 +36,9 @@ class CreatePublication extends Component {
         <form onSubmit={this.createPublication}>
           <div className="form-group">
             <input type="text" className="form-control" placeholder="Titulo" value={this.state.title} onChange={this.onChangeInput} name="title"/>
+          </div>
+          <div className="form-group">
+            <input className="form-control" placeholder="Insertar URL de imagen" value={this.state.img} onChange={this.onChangeInput} name="img" ></input>
           </div>
           <div className="form-group">
             <textarea className="form-control" placeholder="Contenido" value={this.state.content} onChange={this.onChangeInput} name="content" ></textarea>

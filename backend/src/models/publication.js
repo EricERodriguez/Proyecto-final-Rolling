@@ -9,6 +9,10 @@ const publicationSchema = new Schema({
   content: {
     type: String,
     required: true
+  },img: {
+    type: String,
+    required: true,
+    default: "Sin imagen"
   },
   author: {
     type: String
