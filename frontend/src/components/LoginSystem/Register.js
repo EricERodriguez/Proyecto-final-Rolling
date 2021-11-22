@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { CenteredText } from '../Home/componentesT/CenteredText';
 
 class Register extends Component{
 
@@ -84,7 +85,7 @@ class Register extends Component{
               {this.state.error}
             </div>
           ) : ""
-        }
+        }<CenteredText/>
       </div>
     )
   }
