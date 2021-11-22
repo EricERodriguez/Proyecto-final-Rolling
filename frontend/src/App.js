@@ -14,6 +14,8 @@ import Register from "./components/LoginSystem/Register";
 import Error404 from "./components/Errors/Error404";
 import Profile from "./components/User/Profile";
 import Admin from './components/Admin/Admin';
+import Dashboard from './components/Dashboard';
+import Footer from './components/Footer/Footer';
 
 function reload() {
   window.location.reload();
@@ -60,6 +62,7 @@ class App extends Component{
                 {this.state.roles === "ADMIN"?
                 <Route path="/admin" render={(props) => <Admin {...props} acc={this.state.account} rol={this.state.roles}/>} /> :
                 <Route path="/" exact render={(props) => <Home {...props} isAuth={this.state.isAuth} auth={this.auth} acc={this.state.account} />}/>}
+                <Route path="/publication" exact render={(props) => <Dashboard {...props} isAuth={this.state.isAuth} auth={this.auth} acc={this.state.account} />}/>
                 <Route component={Error404} />
               </Switch>
 
@@ -76,7 +79,7 @@ class App extends Component{
         }
 
 
-
+        <Footer/>
       </Router>
     )
   }

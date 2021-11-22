@@ -38,30 +38,37 @@ npm start
     │   	└── public
     │   	└── src
     │   	│   	└── components
+    │   	│   	│   	└── Admin
     │   	│   	│   	└── Comments
     │   	│   	│   	└── Errors
+    │   	│   	│   	└── Footer
+    │   	│   	│   	└── HomeLogin
+                                └── Assets
+                                    └── Img
     │   	│   	│   	└── LoginSystem
     │   	│   	│   	└── Navigation
     │   	│   	│   	└── Publications
     │   	│   	│   	└── User
     ├── .gitignore
     ├── README.md
-    
-    
-    
 
 
-  
+
+
+
+
 
 ## Technologies
 
-  
+
 
 ### FrontEnd
 
-  
+
 
 * Bootstrap 4
+
+* React-Bootstrap
 
 * React
 
@@ -77,7 +84,7 @@ npm start
 
 * bootswatch
 
-  
+
 
 ### BackEnd
 
@@ -100,7 +107,7 @@ npm start
 ### DatosSensibles
 * .env
 
-  
+
 
 ## Accesibilidad Web
 
@@ -108,11 +115,11 @@ npm start
 
 * Los anchors contienen espacio para ser accesible para lectores de pantalla
 
-  
+
 
 ## Backend Routes
 
-  
+
 
 * /api/users/ **GET**
 
