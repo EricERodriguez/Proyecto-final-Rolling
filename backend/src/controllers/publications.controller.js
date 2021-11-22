@@ -11,11 +11,12 @@ publicCtrl.getPublics = async (req, res) => {
 
 publicCtrl.createPublic = async (req, res) => {
 
-  const { title,  content, author } = req.body;
+  const { title,  content, img,  author } = req.body;
 
   const newPublication = new Public({
     title,
     content,
+    img,
     author
   });
 
@@ -34,11 +35,12 @@ publicCtrl.getPublic = async (req, res) => {
 
 publicCtrl.editPublic = async (req, res) => {
 
-  const { title, content } = req.body;
+  const { title, content, img } = req.body;
 
   await Public.findByIdAndUpdate(req.params.id, {
     title,
-    content
+    content,
+    img
   })
 
   res.json({message: "Publication Edited"});

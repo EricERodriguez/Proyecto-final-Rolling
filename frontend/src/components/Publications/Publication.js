@@ -10,6 +10,7 @@ class Publication extends Component {
 
   state = {
     title: "",
+    img: "",
     content: "",
     author: "",
     date: "",
@@ -28,10 +29,11 @@ class Publication extends Component {
 
     const res = await axios.get("http://localhost:4000/api/publications/"+ this.props.match.params.id);
 
-    const { title, content, author, createdAt: date } = res.data;
+    const { title, img, content, author, createdAt: date } = res.data;
 
     this.setState({
       title,
+      img,
       content,
       author,
       date,
@@ -60,7 +62,7 @@ class Publication extends Component {
 
   render() {
 
-    const { title, content, author, date, comments } = this.state;
+    const { title, img, content, author, date, comments } = this.state;
   
     return (
       <div>
@@ -80,6 +82,9 @@ class Publication extends Component {
                 </section>
               ) : ""
             }
+          </div>
+          <div className="card-body">
+          {img === "Sin imagen" ? <div className="card-body"> <p>{img}</p> </div>: <div className="card-body"><img src={img} alt="Imagen del juego" className="responsive-image"  /></div>}
           </div>
           <div className="card-body">
             <p className="card-text">{content}</p>
