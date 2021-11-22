@@ -26,6 +26,7 @@ class ListPublication extends Component {
               <ViewPublication
                 id={publication._id}
                 title={publication.title}
+                img={publication.img}
                 content={publication.content}
                 author={publication.author}
                 date={publication.createdAt}

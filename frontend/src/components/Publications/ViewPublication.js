@@ -12,23 +12,15 @@ class ViewPublication extends Component {
 
   render() {
 
-    const { title, content, author, date } = this.props;
+    const { title, img, content, author, date } = this.props;
 
     return (
       <div className="card  border-success mb-4">
         <div className="card-header bg-black d-flex justify-content-between">
           <h3 className="card-title">{title}</h3>
-          {/* {author === this.props.user ? (
-            <section>
-              <button type="button" onClick={this.deletePublication} className="close" aria-label="Close">
-                <span aria-hidden="true">&times;</span>  
-              </button>
-              <button type="button" className="close" aria-label="Edit">
-                <span aria-hidden="true">&#9998;</span>  
-              </button>
-            </section>
-          ) : ""} */}
-
+        </div>
+        <div className="card-body">
+          {img === "Sin imagen" ? <div className="card-body"> <p>{img}</p> </div>: <div className="card-body"><img src={img} alt="Imagen del juego" className="responsive-image"  /></div>}
         </div>
         <div className="card-body">
           <p>{content}</p>
