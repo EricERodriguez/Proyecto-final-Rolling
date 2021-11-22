@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
-import Dashboard from "./Dashboard";
+// import Dashboard from "./Dashboard";
+import Cards from './HomeLogin/Cards';
+import Carrousel from './HomeLogin/Carrousel';
 import Login from "./LoginSystem/Login";
 import Register from "./LoginSystem/Register";
 
@@ -12,7 +14,12 @@ class Home extends Component {
       <div>
         {
           isAuth ? (
-            <Dashboard acc={this.props.acc} history={this.props.history}/>
+            <div>
+              <Carrousel/>
+              <hr/>
+              <Cards/>
+            </div>
+            
           ) :
           <div>
             <div className="row">
