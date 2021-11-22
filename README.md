@@ -43,8 +43,8 @@ npm start
     │   	│   	│   	└── Errors
     │   	│   	│   	└── Footer
     │   	│   	│   	└── HomeLogin
-                                └── Assets
-                                    └── Img
+    │   	│   	│                └── Assets
+    │   	│   	│                  └── Img
     │   	│   	│   	└── LoginSystem
     │   	│   	│   	└── Navigation
     │   	│   	│   	└── Publications
