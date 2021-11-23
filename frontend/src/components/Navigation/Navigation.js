@@ -43,7 +43,7 @@ class Navigation extends Component {
                       </a>
                       <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                         <Link className="dropdown-item" to="/profile/">Perfil</Link>
-                        { rol === "ADMIN"? <Link className="dropdown-item" to="/admin/">rol {rol}</Link>: <hr/>}
+                        { rol === "ADMIN"? <Link className="dropdown-item" to="/admin/">rol {rol}</Link>: <></>}
                         <div className="dropdown-divider"></div>
                         <a className="dropdown-item" href="#" onClick={this.props.desAuth}>Cerrar Sesion</a>
                       </div>
