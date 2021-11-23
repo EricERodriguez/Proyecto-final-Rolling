@@ -42,9 +42,13 @@ npm start
     │   	│   	│   	└── Comments
     │   	│   	│   	└── Errors
     │   	│   	│   	└── Footer
+    │   	│   	│   	└── Home
+    │   	│   	│       │        └── ComponentesT
     │   	│   	│   	└── HomeLogin
-    │   	│   	│                └── Assets
-    │   	│   	│                  └── Img
+    │   	│   	│       │        └── Assets
+    │   	│   	│       │          └── Img
+    │   	│   	│   	└── Juegos
+    │   	│   	│       │        └── ImgJuegos
     │   	│   	│   	└── LoginSystem
     │   	│   	│   	└── Navigation
     │   	│   	│   	└── Publications
@@ -69,6 +73,8 @@ npm start
 * Bootstrap 4
 
 * React-Bootstrap
+
+* React-bootstrap-validation
 
 * @material-ui/core
 
