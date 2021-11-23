@@ -17,6 +17,13 @@ import Admin from './components/Admin/Admin';
 import Dashboard from './components/Dashboard';
 import Footer from './components/Footer/Footer';
 
+import DungeonKey from './components/Juegos/DungeonKey';
+import Pacman from './components/Juegos/Pacman';
+import BreakOut from './components/Juegos/BreakOut';
+import NeoMartin from './components/Juegos/NeoMartin';
+import PixelDungeon from './components/Juegos/PixelDungeon';
+import TaTeTi from './components/Juegos/TaTeTi';
+
 function reload() {
   window.location.reload();
 }
@@ -63,6 +70,12 @@ class App extends Component{
                 <Route path="/admin" render={(props) => <Admin {...props} acc={this.state.account} rol={this.state.roles}/>} /> :
                 <Route path="/" exact render={(props) => <Home {...props} isAuth={this.state.isAuth} auth={this.auth} acc={this.state.account} />}/>}
                 <Route path="/publication" exact render={(props) => <Dashboard {...props} isAuth={this.state.isAuth} auth={this.auth} acc={this.state.account} />}/>
+                <Route path="/NeoMartin" render={(props) => <NeoMartin {...props} acc={this.state.account} />} />
+                <Route path="/DungeonKey" render={(props) => <DungeonKey {...props} acc={this.state.account} />} />
+                <Route path="/Pacman" render={(props) => <Pacman {...props} acc={this.state.account} />} />
+                <Route path="/BreakOut" render={(props) => <BreakOut {...props} acc={this.state.account} />} />
+                <Route path="/PixelDungeon" render={(props) => <PixelDungeon {...props} acc={this.state.account} />} />
+                <Route path="/TaTeTi" render={(props) => <TaTeTi {...props} acc={this.state.account} />} />
                 <Route component={Error404} />
               </Switch>
 
