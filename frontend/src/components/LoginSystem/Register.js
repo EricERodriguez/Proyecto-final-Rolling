@@ -72,6 +72,7 @@ class Register extends Component{
           </div>
           <div className="form-group row pl-3 pr-3">
             <DatePicker selected={this.state.date} onChange={this.handleChange} className="form-control btn-block col-md" placeholderText="Fecha de Nacimiento" />
+            <hr/>
             <button className="btn btn-success mt-sm-3 mt-md-3 ml-lg-3 mt-lg-0 col-md ">Registarse</button>
           </div>
         </form>
