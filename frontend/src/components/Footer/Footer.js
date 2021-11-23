@@ -17,20 +17,19 @@ function Footer() {
             <h5 className="text-uppercase">Contactos</h5>
             <ul className="list-unstyled">
               <li>
-                <p>
+                <p class="text-success">
                   <i className="fas fa-home mr-3"></i>San Miguel de Tucumán, 25
                   de mayo 890, Argentina
                 </p>
               </li>
               <li>
-                <p>
-                  <i className="fas fa-envelope mr-3"></i> rollingames@gmail.com
-                </p>
+                <a class="text-success" href="mailto:rollingames@gmail.com">
+                  rollingames@gmail.com
+                </a>
               </li>
               <li>
-                <p>
-                  <i className="fas fa-phone mr-3"></i> + 01 234 567 88
-                </p>
+                <a class="text-success" href="tel:01 234 567 88"> + 01 234 567 88
+                </a>
               </li>
             </ul>
           </div>
@@ -38,7 +37,7 @@ function Footer() {
           <div className="col-md-4 col-lg-4 mx-auto my-md-4 my-0 mt-4 mb-1">
             <h5 className="text-uppercase mb-3">rollinGames</h5>
             <p>Acá vas a encontrar los mejores juegos y publicaciones!</p>
-            <p>Toda la diversion que necesitas esta aquí!</p>
+            <small class="text-muted">Toda la diversion que necesitas esta aquí!</small>
           </div>
           <hr className="clearfix w-100 d-md-none" />
           <div className="col-md-2 col-lg-4 text-betwen mx-auto my-4">
@@ -47,6 +46,7 @@ function Footer() {
               href="https://facebook.com"
               target="blank"
               className="text-decoration-none"
+              class="badge rounded-pill bg-secondary m-2"
             >
               <FontAwesomeIcon icon={faFacebook} />
             </a>
@@ -54,6 +54,7 @@ function Footer() {
               href="https://github.com/EricERodriguez/Proyecto-final-Rolling"
               target="blank"
               className="text-decoration-none"
+              class="badge rounded-pill bg-secondary m-2"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
@@ -61,6 +62,7 @@ function Footer() {
               href="https://instagram.com"
               target="blank"
               className="text-decoration-none"
+              class="badge rounded-pill bg-secondary m-2"
             >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
@@ -68,6 +70,7 @@ function Footer() {
               href="https://twitter.com"
               target="blank"
               className="text-decoration-none"
+              class="badge rounded-pill bg-secondary m-2"
             >
               <FontAwesomeIcon icon={faTwitter} />
             </a>
@@ -75,6 +78,7 @@ function Footer() {
               href="https://youtube.com"
               target="blank"
               className="text-decoration-none"
+              class="badge rounded-pill bg-secondary m-2"
             >
               <FontAwesomeIcon icon={faYoutube} />
             </a>

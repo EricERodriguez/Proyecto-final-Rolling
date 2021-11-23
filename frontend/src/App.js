@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import axios from "axios";
 
-// import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "bootswatch/dist/vapor/bootstrap.min.css";
 

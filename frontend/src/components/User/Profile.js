@@ -23,7 +23,7 @@ class Profile extends Component{
       <div className="text-center">
             <div class="our-team">
               <div class="picture">
-                <img class="img-fluid" src="https://picsum.photos/130/130?image=1027" alt="img de perfil"/>
+                <img class="img-fluid" src="https://www.kindpng.com/picc/m/372-3724746_thumb-image-plantilla-foto-perfil-twitter-hd-png.png" alt="img de perfil"/>
               </div>
           <div class="team-content">
             <h1 class="name">{fullName}</h1>

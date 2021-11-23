@@ -42,9 +42,11 @@ class Login extends Component{
           <div className="form-group">
             <input type="email" className="form-control" placeholder="Email" name="email" value={this.state.email} onChange={this.onInputChange}/>
           </div>
+          <hr/>
           <div className="form-group">
             <input type="password" className="form-control" placeholder="Contraseña" name="password" value={this.state.password} onChange={this.onInputChange}/>
           </div>
+          <hr/>
           <button className="btn btn-primary">Iniciar</button>
         </form>
         <CenteredText/>
