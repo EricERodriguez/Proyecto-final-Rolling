@@ -17,10 +17,11 @@ class Login extends Component{
     delete user.error;
 
     const res = await axios.post("http://localhost:4000/api/login", user);
-
+    
     if(typeof res.data == "string"){
       this.setState({error: res.data});
     }else{
+      window.location="/"
       delete res.data.password
       this.props.auth(res.data);
     }
