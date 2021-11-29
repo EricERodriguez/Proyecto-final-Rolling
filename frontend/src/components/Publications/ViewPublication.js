@@ -16,7 +16,7 @@ class ViewPublication extends Component {
 
     return (
       <div className="card  border-success mb-4">
-        <div className="card-header bg-black d-flex justify-content-between">
+        <div className="card-header bg-black d-flex justify-content-between mt-5">
           <h3 className="card-title">{title}</h3>
         </div>
         <div className="card-body">
