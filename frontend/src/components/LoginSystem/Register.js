@@ -87,10 +87,13 @@ class Register extends Component{
             <input type="password" className="form-control" name="password" placeholder="Contraseña" onChange={this.onInputChange} value={this.state.password} />
           </div>
           <div className="form-group row p-3">
+            <input type="password" className="form-control" name="confirm_password" placeholder="Vuelva a escribir la contraseña" onChange={this.onInputChange} value={this.state.confirm_password}/>
+          </div>
+          <div className="form-group row p-3">
             <DatePicker selected={this.state.date} onChange={this.handleChange} className="form-control btn-block col-md" placeholderText="Fecha de Nacimiento" locale="es" dateFormat="dd/MM/yyyy" peekNextMonth
       showMonthDropdown
       showYearDropdown
-      dropdownMode="select" icon />
+      dropdownMode="select"/>
             <hr/>
             <button className="btn btn-success mt-sm-3 mt-md-3 ml-lg-3 mt-lg-0 col-md registroFont">Registrarse</button>
           </div>
