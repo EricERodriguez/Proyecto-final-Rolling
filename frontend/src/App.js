@@ -36,7 +36,6 @@ class App extends Component{
   auth = (account) => {
     this.setState({account, isAuth: true})
     localStorage.setItem("acc", this.state.account._id);
-    reload()
   }
 
   desAuth = () => {
