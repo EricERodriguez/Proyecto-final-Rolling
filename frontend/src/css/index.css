@@ -44,6 +44,9 @@
   margin-bottom: 1rem;
   border: 1px solid skyblue;
 }
+.MuiGrid-root{
+  border-radius: 40px;
+}
 
 .card a{
   text-decoration: none;
@@ -85,3 +88,13 @@
   width: 30%;
 }
 
+.registroFont{
+  color: #1a0933;
+  font-size: 20px;
+  font-weight: bold;
+}
+.alert-success{
+  color: #1a0933;
+  font-size: 20px;
+  font-weight: bold;
+}

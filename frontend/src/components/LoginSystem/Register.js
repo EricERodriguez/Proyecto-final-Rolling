@@ -12,14 +12,17 @@ class Register extends Component{
     fullName: "",
     email: "",
     password: "",
+    confirm_password: "",
     date: "",
     error: ""
   }
 
   onInputChange = e => {
+    
     this.setState({
       [e.target.name] : e.target.value
-    });
+    });console.log(this.state.password)
+    console.log(this.state.confirm_password)
   }
 
   createAccount = async (e) => {
@@ -31,18 +34,28 @@ class Register extends Component{
 
     const res = await axios.post("http://localhost:4000/api/register",user);
 
-    try{
-      error = res.data.errmsg.split(" ")[7];
-    }catch{
-      error = res.data.message;
-    }
-
-    if(error === "email_1"){
-      error = "Ya existe un usuario con ese Email"
-    }else if(error === "username_1"){
-      error = "Ya existe un usuario con ese Nombre de Usuario"
-    }else{
-      error = "Usuario Creado"
+    if (this.state.password === this.state.confirm_password) {
+      if (res.data.message === "User Created") {
+        error = "Usuario creado con exito"
+      }else{
+        error = "Verifique los datos ingresados"
+        if (res.data.message !== undefined) {
+          error = res.data.message;
+          if (error === "User validation failed: date: Path `date` is required.") {
+            error = "Indique una fecha de nacimiento valida"
+          }else if (error === "User validation failed: fullName: Path `fullName` is required."){
+            error = "Indique una nombre completo valido"
+          } else if (error === "User validation failed: username: Path `username` is required."){
+            error = "Indique una nombre de usuario valido"
+          } else {
+            error = "Verifique los datos ingresados"
+          }
+        } else {
+          error = "Verificar los datos ingresados"
+        }
+      }
+    } else {
+      error = "Las contraseñas no coinciden"
     }
 
     this.setState({
@@ -53,6 +66,7 @@ class Register extends Component{
   handleChange = (date) => {
     this.setState({date});
   }
+
 
   render(){
     return (
@@ -68,6 +82,7 @@ class Register extends Component{
           <div className="form-group  row p-3">
             <input type="email" className="form-control" name="email" placeholder="Email" onChange={this.onInputChange} value={this.state.email}/>
           </div>
+
           <div className="form-group row p-3">
             <input type="password" className="form-control" name="password" placeholder="Contraseña" onChange={this.onInputChange} value={this.state.password} />
           </div>
@@ -77,11 +92,11 @@ class Register extends Component{
       showYearDropdown
       dropdownMode="select" icon />
             <hr/>
-            <button className="btn btn-success mt-sm-3 mt-md-3 ml-lg-3 mt-lg-0 col-md ">Registarse</button>
+            <button className="btn btn-success mt-sm-3 mt-md-3 ml-lg-3 mt-lg-0 col-md registroFont">Registrarse</button>
           </div>
         </form>
         {
-          this.state.error.length > 0 ? this.state.error === "Usuario Creado" ? (
+          this.state.error === "Usuario creado con exito" ? (
             <div className="alert alert-success">
               {this.state.error}
             </div>
@@ -89,8 +104,8 @@ class Register extends Component{
             <div className="alert alert-danger">
               {this.state.error}
             </div>
-          ) : ""
-        }<CenteredText/>
+          )
+        }<CenteredText  />
       </div>
     )
   }

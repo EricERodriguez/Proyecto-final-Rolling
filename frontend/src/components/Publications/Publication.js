@@ -111,7 +111,7 @@ class Publication extends Component {
     return (
       <div>
         <div className="card ">
-          <div className="card-header bg-black d-flex justify-content-between">
+          <div className="card-header bg-black d-flex justify-content-between mt-5">
             <h3 className="card-title bg-black">{title}</h3>
             {
               author === this.props.acc.username ||"admin" === this.props.acc.username ?
